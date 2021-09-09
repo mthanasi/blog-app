@@ -12,12 +12,12 @@ var blogRoutes = require("./routes/blogs"),
   indexRoutes = require("./routes/index");
 
 //hiding password in an environment variable
-var { MONGOURL } = require("./config");
+var { dbURL } = require("./config");
 
 //set up the connection
 
 mongoose
-  .connect(MONGOURL, {
+  .connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

@@ -1,35 +1,35 @@
 /* the initial background color we are going to fade in */
 
 body {
-    background-color: #000;
+  background-color: #000;
 }
 
 /* z index = 1 will bring forward landing-header wrt elements
 with smalller z index however we have to change the po to relative*/
 
 #landing-header {
-    z-index: 1;
-    position: relative;
-    text-align: center;
-    padding-top: 40vh;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
 }
 
 #landing-header h1 {
-    color: #fff;
+  color: #fff;
 }
 
 /* list-style = none -> removes the bullet points */
 
 .slideshow {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* imageAnimation lasts for 50s (seconds),
@@ -37,61 +37,61 @@ keeps linear timing (the whole animation runs at the same speed),
 and loops an infinite number of times */
 
 .slideshow li {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 50s linear infinite;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
 }
 
 /* last four need an animation-delay -> this way they all fire off 
 one after the other in ten second intervals */
 
 .slideshow li:nth-child(1) {
-    background-image: url(https://pixabay.com/get/55e3d3404d51b108f5d084609620367d1c3ed9e04e50744e762d7fdc924ec6_340.jpg)
+  background-image: url(https://images.unsplash.com/photo-1625123627242-97ef1000c6d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
 }
 
 .slideshow li:nth-child(2) {
-    background-image: url(https://pixabay.com/get/51e9d4434e5bb108f5d084609620367d1c3ed9e04e50744e762d7fdc924ec6_340.jpg);
-    animation-delay: 10s;
+  background-image: url(https://images.unsplash.com/photo-1519337265831-281ec6cc8514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);
+  animation-delay: 10s;
 }
 
 .slideshow li:nth-child(3) {
-    background-image: url(https://pixabay.com/get/5fe6dd464350b108f5d084609620367d1c3ed9e04e50744e762d7fdc924ec6_340.jpg);
-    animation-delay: 20s;
+  background-image: url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);
+  animation-delay: 20s;
 }
 
 .slideshow li:nth-child(4) {
-    background-image: url(https://pixabay.com/get/51e6d7464f57b108f5d084609620367d1c3ed9e04e50744e762d7fdc924ec6_340.jpg);
-    animation-delay: 30s;
+  background-image: url(https://images.unsplash.com/photo-1604933762023-7213af7ff7a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80);
+  animation-delay: 30s;
 }
 
 .slideshow li:nth-child(5) {
-    background-image: url(https://pixabay.com/get/5ee6d0434d51b108f5d084609620367d1c3ed9e04e50744e762d7fdc924ec6_340.jpg);
-    animation-delay: 40s;
+  background-image: url(https://images.unsplash.com/photo-1572028412480-0a75271c6bb9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+  animation-delay: 40s;
 }
 
 @keyframes imageAnimation {
-    0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
-    }
-    10% {
-        opacity: 1;
-        animation-timing-function: ease-out;
-    }
-    20% {
-        opacity: 1
-    }
-    30% {
-        opacity: 0
-    }
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
 }
 
 /* The animation will be named imageAnimation, which matches with the value from our 
@@ -117,5 +117,5 @@ which is what creates the crossfade effect */
 /* Older browser support - .no-cssanimations class added by modernizr */
 
 .no-cssanimations .slideshow li {
-    opacity: 1;
+  opacity: 1;
 }
